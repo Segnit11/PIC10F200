@@ -1,0 +1,29 @@
+### HEXMate logfile and output summary ###
+### Memory Usage ###
+ Unused memory ranges:
+  0h - 7FFh
+  804h - FEEDh
+  
+ Clock.hex ranges:
+  800h - 803h
+  FEEEh - FFFFh
+  
+### Hex Memory Map ###
+ Legend:
+  - = Unused memory
+  F = Filled ROM
+  S = Stored serial code
+  A = Stored ASCII string
+  R = Reserved for checksum
+  C = Stored checksum result
+  T = Trailing code
+  & = Find & replace opcode
+  X = Find & delete opcode
+  1 = Clock.hex
+00000000: ----------------------------------------------------------------
+00000800: 1111------------------------------------------------------------
+0000FEC0: ----------------------------------------------111111111111111111
+0000FF00: 1111111111111111111111111111111111111111111111111111111111111111
+0000FF40: 1111111111111111111111111111111111111111111111111111111111111111
+0000FF80: 1111111111111111111111111111111111111111111111111111111111111111
+0000FFC0: 1111111111111111111111111111111111111111111111111111111111111111

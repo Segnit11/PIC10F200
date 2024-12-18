@@ -1,0 +1,38 @@
+MPLINK 4.49, Linker
+Linker Map File - Created Fri Nov 29 18:33:51 2024
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000800    program   0x000032
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000800    0x000831      
+            50 out of 66584 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  Display   0x00082c    program     static C:\Users\stulujr.local\Documents\MiniProject\ASMFiles\1234.asm
+                     Init   0x000812    program     static C:\Users\stulujr.local\Documents\MiniProject\ASMFiles\1234.asm
+                     Main   0x000804    program     static C:\Users\stulujr.local\Documents\MiniProject\ASMFiles\1234.asm
+                     Roll   0x000824    program     static C:\Users\stulujr.local\Documents\MiniProject\ASMFiles\1234.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     Main   0x000804    program     static C:\Users\stulujr.local\Documents\MiniProject\ASMFiles\1234.asm
+                     Init   0x000812    program     static C:\Users\stulujr.local\Documents\MiniProject\ASMFiles\1234.asm
+                     Roll   0x000824    program     static C:\Users\stulujr.local\Documents\MiniProject\ASMFiles\1234.asm
+                  Display   0x00082c    program     static C:\Users\stulujr.local\Documents\MiniProject\ASMFiles\1234.asm
+
+

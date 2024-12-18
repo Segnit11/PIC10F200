@@ -1,0 +1,427 @@
+
+
+HI-TECH Software LITE Macro Assembler (PIC18) V9.63PL3 build 4692 
+                                                       Fri Nov 29 19:09:16 2024
+
+HI-TECH Software Omniscient Code Generator build 4692
+     1  000000                     opt subtitle "HI-TECH Software Omniscient Code G
+                                 enerator build 4692"
+     2                           
+     3                           	processor	18F4620
+     4  000000                     porta	equ	0F80h
+     5  000000                     portb	equ	0F81h
+     6  000000                     portc	equ	0F82h
+     7  000000                     portd	equ	0F83h
+     8  000000                     porte	equ	0F84h
+     9  000000                     lata	equ	0F89h
+    10  000000                     latb	equ	0F8Ah
+    11  000000                     latc	equ	0F8Bh
+    12  000000                     latd	equ	0F8Ch
+    13  000000                     late	equ	0F8Dh
+    14  000000                     trisa	equ	0F92h
+    15  000000                     trisb	equ	0F93h
+    16  000000                     trisc	equ	0F94h
+    17  000000                     trisd	equ	0F95h
+    18  000000                     trise	equ	0F96h
+    19  000000                     pie1	equ	0F9Dh
+    20  000000                     pir1	equ	0F9Eh
+    21  000000                     ipr1	equ	0F9Fh
+    22  000000                     pie2	equ	0FA0h
+    23  000000                     pir2	equ	0FA1h
+    24  000000                     ipr2	equ	0FA2h
+    25  000000                     t3con	equ	0FB1h
+    26  000000                     tmr3l	equ	0FB2h
+    27  000000                     tmr3h	equ	0FB3h
+    28  000000                     ccp1con	equ	0FBDh
+    29  000000                     ccpr1l	equ	0FBEh
+    30  000000                     ccpr1h	equ	0FBFh
+    31  000000                     adcon1	equ	0FC1h
+    32  000000                     adcon0	equ	0FC2h
+    33  000000                     adresl	equ	0FC3h
+    34  000000                     adresh	equ	0FC4h
+    35  000000                     sspcon2	equ	0FC5h
+    36  000000                     sspcon1	equ	0FC6h
+    37  000000                     sspstat	equ	0FC7h
+    38  000000                     sspadd	equ	0FC8h
+    39  000000                     sspbuf	equ	0FC9h
+    40  000000                     t2con	equ	0FCAh
+    41  000000                     pr2	equ	0FCBh
+    42  000000                     tmr2	equ	0FCCh
+    43  000000                     t1con	equ	0FCDh
+    44  000000                     tmr1l	equ	0FCEh
+    45  000000                     tmr1h	equ	0FCFh
+    46  000000                     rcon	equ	0FD0h
+    47  000000                     wdtcon	equ	0FD1h
+    48  000000                     lvdcon	equ	0FD2h
+    49  000000                     osccon	equ	0FD3h
+    50  000000                     t0con	equ	0FD5h
+    51  000000                     tmr0l	equ	0FD6h
+    52  000000                     tmr0h	equ	0FD7h
+    53  000000                     status	equ	0FD8h
+    54  000000                     fsr2	equ	0FD9h
+    55  000000                     fsr2l	equ	0FD9h
+    56  000000                     fsr2h	equ	0FDAh
+    57  000000                     plusw2	equ	0FDBh
+    58  000000                     preinc2	equ	0FDCh
+    59  000000                     postdec2	equ	0FDDh
+    60  000000                     postinc2	equ	0FDEh
+    61  000000                     indf2	equ	0FDFh
+    62  000000                     bsr	equ	0FE0h
+    63  000000                     fsr1	equ	0FE1h
+    64  000000                     fsr1l	equ	0FE1h
+    65  000000                     fsr1h	equ	0FE2h
+    66  000000                     plusw1	equ	0FE3h
+    67  000000                     preinc1	equ	0FE4h
+    68  000000                     postdec1	equ	0FE5h
+    69  000000                     postinc1	equ	0FE6h
+    70  000000                     indf1	equ	0FE7h
+    71  000000                     wreg	equ	0FE8h
+    72  000000                     fsr0	equ	0FE9h
+    73  000000                     fsr0l	equ	0FE9h
+    74  000000                     fsr0h	equ	0FEAh
+    75  000000                     plusw0	equ	0FEBh
+    76  000000                     preinc0	equ	0FECh
+    77  000000                     postdec0	equ	0FEDh
+    78  000000                     postinc0	equ	0FEEh
+    79  000000                     indf0	equ	0FEFh
+    80  000000                     intcon3	equ	0FF0h
+    81  000000                     intcon2	equ	0FF1h
+    82  000000                     intcon	equ	0FF2h
+    83  000000                     prod	equ	0FF3h
+    84  000000                     prodl	equ	0FF3h
+    85  000000                     prodh	equ	0FF4h
+    86  000000                     tablat	equ	0FF5h
+    87  000000                     tblptr	equ	0FF6h
+    88  000000                     tblptrl	equ	0FF6h
+    89  000000                     tblptrh	equ	0FF7h
+    90  000000                     tblptru	equ	0FF8h
+    91  000000                     pcl	equ	0FF9h
+    92  000000                     pclat	equ	0FFAh
+    93  000000                     pclath	equ	0FFAh
+    94  000000                     pclatu	equ	0FFBh
+    95  000000                     stkptr	equ	0FFCh
+    96  000000                     tosl	equ	0FFDh
+    97  000000                     tosh	equ	0FFEh
+    98  000000                     tosu	equ	0FFFh
+    99                           	global	__ramtop
+   100                           	global	__accesstop
+   101                           	GLOBAL	__activetblptr
+   102  000000                     __activetblptr	EQU	0
+   103                           	GLOBAL	__smallconst,__Lsmallconst
+   104  000000                     __smallconst	EQU	__Lsmallconst
+   105                           	GLOBAL	__mediumconst,__Lmediumconst
+   106  000000                     __mediumconst	EQU	__Lmediumconst
+   107                           	GLOBAL	__Ldata
+   108  000000                     __Ldata	EQU	0
+   109  000000                     main@i	equ	??_main+0
+   110                           	global	main@i
+   111  000000                     Wait@i	equ	??_Wait+0
+   112                           	global	Wait@i
+   113  000000                     Wait@j	equ	??_Wait+2
+   114                           	global	Wait@j
+   115  000000                     Wait@DATA	equ	?_Wait+0
+   116                           	global	Wait@DATA
+   117                           ;Data sizes: Strings 0, constant 0, data 0, bss 
+                                 0, persistent 0 stack 11
+   118                           	global	_main
+   119                           	global	??_main
+   120                           	global	?_main
+   121                                   psect   text0,class=CODE,space=0,reloc=2
+   122                           
+   123                           	opt lm
+   124                           	file	"C:\Users\stulujr.local\Documents\MiniProj
+                                 ect\CFiles\Count.c"
+   125                           	line	21
+   126  000000                     	__size_of_main	equ	__end_of_main-_main
+   127                           ;Count.c: 20: void main(void)
+   128                           ;Count.c: 21: {
+   129                           	
+   130  00FF6C                     _main:		; BSR set to: ?
+   131                           
+   132                           	opt stack 31
+   133                           	line	24
+   134                           ;Count.c: 22: unsigned long int i;
+   135                           ;Count.c: 24: TRISA = 0;
+   136  00FF6C  0E00               	movlw	low(0)
+   137  00FF6E  6E92               	movwf	((c:3986)),c	;volatile
+   138                           	line	25
+   139                           ;Count.c: 25: TRISB = 0;
+   140  00FF70  0E00               	movlw	low(0)
+   141  00FF72  6E93               	movwf	((c:3987)),c	;volatile
+   142                           	line	26
+   143                           ;Count.c: 26: TRISC = 0;
+   144  00FF74  0E00               	movlw	low(0)
+   145  00FF76  6E94               	movwf	((c:3988)),c	;volatile
+   146                           	line	27
+   147                           ;Count.c: 27: TRISD = 0;
+   148  00FF78  0E00               	movlw	low(0)
+   149  00FF7A  6E95               	movwf	((c:3989)),c	;volatile
+   150                           	line	28
+   151                           ;Count.c: 28: TRISE = 0;
+   152  00FF7C  0E00               	movlw	low(0)
+   153  00FF7E  6E96               	movwf	((c:3990)),c	;volatile
+   154                           	line	29
+   155                           ;Count.c: 29: ADCON1 = 0x0F;
+   156  00FF80  0100               	movlb	0	; () banked
+   157  00FF82  6FF9               	movwf	(??_main+4+0)&0ffh
+   158  00FF84  0E0F               	movlw	low(0Fh)
+   159  00FF86  6EC1               	movwf	((c:4033)),c
+   160  00FF88  0100               	movlb	0	; () banked
+   161  00FF8A  51F9               	movf	(??_main+4+0)&0ffh,w
+   162                           	line	30
+   163                           ;Count.c: 30: i = 0;
+   164  00FF8C  0E00               	movlw	low(0)
+   165  00FF8E  0100               	movlb	0	; () banked
+   166  00FF90  0100               	movlb	0	; () banked
+   167  00FF92  6FF5               	movwf	((main@i))&0ffh
+   168  00FF94  0E00               	movlw	high(0)
+   169  00FF96  0100               	movlb	0	; () banked
+   170  00FF98  6FF6               	movwf	((main@i+1))&0ffh
+   171  00FF9A  0E00               	movlw	low highword(0)
+   172  00FF9C  0100               	movlb	0	; () banked
+   173  00FF9E  6FF7               	movwf	((main@i+2))&0ffh
+   174  00FFA0  0E00               	movlw	high highword(0)
+   175  00FFA2  0100               	movlb	0	; () banked
+   176  00FFA4  6FF8               	movwf	((main@i+3))&0ffh
+   177                           	line	32
+   178                           ;Count.c: 32: while(1) {
+   179                           	
+   180  00FFA6                     l119:		; BSR set to: ?
+   181                           
+   182                           	line	33
+   183                           ;Count.c: 33: i = i + 1;
+   184  00FFA6  0E01               	movlw	01h
+   185  00FFA8  0100               	movlb	0	; () banked
+   186  00FFAA  0100               	movlb	0	; () banked
+   187  00FFAC  25F5               	addwf	((main@i))&0ffh,w
+   188  00FFAE  0100               	movlb	0	; () banked
+   189  00FFB0  0100               	movlb	0	; () banked
+   190  00FFB2  6FF5               	movwf	((main@i))&0ffh
+   191  00FFB4  0E00               	movlw	0
+   192  00FFB6  0100               	movlb	0	; () banked
+   193  00FFB8  0100               	movlb	0	; () banked
+   194  00FFBA  21F6               	addwfc	((main@i+1))&0ffh,w
+   195  00FFBC  0100               	movlb	0	; () banked
+   196  00FFBE  6FF6               	movwf	1+((main@i))&0ffh
+   197  00FFC0  0E00               	movlw	0
+   198  00FFC2  0100               	movlb	0	; () banked
+   199  00FFC4  0100               	movlb	0	; () banked
+   200  00FFC6  21F7               	addwfc	((main@i+2))&0ffh,w
+   201  00FFC8  0100               	movlb	0	; () banked
+   202  00FFCA  6FF7               	movwf	2+((main@i))&0ffh
+   203  00FFCC  0E00               	movlw	0
+   204  00FFCE  0100               	movlb	0	; () banked
+   205  00FFD0  0100               	movlb	0	; () banked
+   206  00FFD2  21F8               	addwfc	((main@i+3))&0ffh,w
+   207  00FFD4  0100               	movlb	0	; () banked
+   208  00FFD6  6FF8               	movwf	3+((main@i))&0ffh
+   209                           	line	34
+   210                           ;Count.c: 34: PORTD = i;
+   211  00FFD8  C0F5  FF83         	movff	(main@i),(c:3971)	;volatile
+   212                           	line	35
+   213                           ;Count.c: 35: PORTC = i >> 8;
+   214  00FFDC  C0F6  FF82         	movff	0+1+(main@i),(c:3970)	;volatile
+   215                           	line	36
+   216                           ;Count.c: 36: PORTB = i >> 16;
+   217  00FFE0  C0F7  FF81         	movff	0+2+(main@i),(c:3969)	;volatile
+   218                           	line	37
+   219                           ;Count.c: 37: PORTA = i >> 24;
+   220  00FFE4  C0F8  FF80         	movff	0+3+(main@i),(c:3968)	;volatile
+   221                           	line	38
+   222                           ;Count.c: 38: Wait(1);
+   223  00FFE8  0E01               	movlw	low(01h)
+   224  00FFEA  0100               	movlb	0	; () banked
+   225  00FFEC  0100               	movlb	0	; () banked
+   226  00FFEE  6FFA               	movwf	((?_Wait))&0ffh
+   227  00FFF0  0E00               	movlw	high(01h)
+   228  00FFF2  0100               	movlb	0	; () banked
+   229  00FFF4  6FFB               	movwf	((?_Wait+1))&0ffh
+   230  00FFF6  EC77  F07F         	call	_Wait	;wreg free
+   231                           	line	39
+   232                           	
+   233  00FFFA                     l118:		; BSR set to: ?
+   234                           
+   235                           	line	32
+   236  00FFFA  D7D5               	goto	l119
+   237                           	global	start
+   238  00FFFC  EF00  F004         	goto	start
+   239                           	opt stack 0
+   240                           GLOBAL __end_of_main
+   241  010000                     	__end_of_main:
+   242                           	FNSIZE	_main,5,0
+   243                           ; =============== function _main ends ==========
+                                 ==
+   244                           
+   245                                   psect   text1,class=CODE,space=0,reloc=2
+   246                           	line	40
+   247                           
+   248                           	opt lm
+   249                           	signat	_main,88
+   250                           	global	_Wait
+   251                           	global	??_Wait
+   252                           	global	?_Wait
+   253                           	file	"C:\Users\stulujr.local\Documents\MiniProj
+                                 ect\CFiles\Count.c"
+   254                           	line	9
+   255  000000                     	__size_of_Wait	equ	__end_of_Wait-_Wait
+   256                           ;Count.c: 8: void Wait(unsigned int DATA)
+   257                           ;Count.c: 9: {
+   258                           	
+   259  00FEEE                     _Wait:		; BSR set to: ?
+   260                           
+   261                           	opt stack 30
+   262                           	line	11
+   263  00FEEE  0E00               	movlw	low(0)
+   264  00FEF0  0100               	movlb	0	; () banked
+   265  00FEF2  0100               	movlb	0	; () banked
+   266  00FEF4  6FFC               	movwf	((Wait@i))&0ffh
+   267  00FEF6  0E00               	movlw	high(0)
+   268  00FEF8  0100               	movlb	0	; () banked
+   269  00FEFA  6FFD               	movwf	((Wait@i+1))&0ffh
+   270  00FEFC  D026               	goto	l113
+   271                           	
+   272  00FEFE                     l110:		; BSR set to: ?
+   273                           
+   274                           	line	12
+   275                           ;Count.c: 12: for (j=0; j<1000; j++);
+   276  00FEFE  0E00               	movlw	low(0)
+   277  00FF00  0100               	movlb	0	; () banked
+   278  00FF02  0100               	movlb	0	; () banked
+   279  00FF04  6FFE               	movwf	((Wait@j))&0ffh
+   280  00FF06  0E00               	movlw	high(0)
+   281  00FF08  0100               	movlb	0	; () banked
+   282  00FF0A  6FFF               	movwf	((Wait@j+1))&0ffh
+   283  00FF0C  0EE8               	movlw	0E8h
+   284  00FF0E  0100               	movlb	0	; () banked
+   285  00FF10  0100               	movlb	0	; () banked
+   286  00FF12  5DFE               	subwf	((Wait@j))&0ffh,w
+   287  00FF14  0E03               	movlw	03h
+   288  00FF16  0100               	movlb	0	; () banked
+   289  00FF18  59FF               	subwfb	((Wait@j+1))&0ffh,w
+   290  00FF1A  A0D8               	btfss	status,0
+   291  00FF1C  D001               	goto	u41
+   292  00FF1E  D001               	goto	u40
+   293  00FF20                     u41:
+   294  00FF20  D001               	goto	l114
+   295  00FF22                     u40:
+   296  00FF22  D00F               	goto	l115
+   297                           	
+   298  00FF24                     l114:		; BSR set to: ?
+   299                           
+   300  00FF24  0100               	movlb	0	; () banked
+   301  00FF26  0100               	movlb	0	; () banked
+   302  00FF28  4BFE               	infsnz	((Wait@j))&0ffh
+   303  00FF2A  2BFF               	incf	((Wait@j+1))&0ffh
+   304  00FF2C  0EE8               	movlw	0E8h
+   305  00FF2E  0100               	movlb	0	; () banked
+   306  00FF30  0100               	movlb	0	; () banked
+   307  00FF32  5DFE               	subwf	((Wait@j))&0ffh,w
+   308  00FF34  0E03               	movlw	03h
+   309  00FF36  0100               	movlb	0	; () banked
+   310  00FF38  59FF               	subwfb	((Wait@j+1))&0ffh,w
+   311  00FF3A  A0D8               	btfss	status,0
+   312  00FF3C  D001               	goto	u51
+   313  00FF3E  D001               	goto	u50
+   314  00FF40                     u51:
+   315  00FF40  D7F1               	goto	l114
+   316  00FF42                     u50:
+   317                           	
+   318  00FF42                     l115:		; BSR set to: ?
+   319                           
+   320                           	line	11
+   321  00FF42  0100               	movlb	0	; () banked
+   322  00FF44  0100               	movlb	0	; () banked
+   323  00FF46  4BFC               	infsnz	((Wait@i))&0ffh
+   324  00FF48  2BFD               	incf	((Wait@i+1))&0ffh
+   325                           	
+   326  00FF4A                     l113:		; BSR set to: ?
+   327                           
+   328  00FF4A  0100               	movlb	0	; () banked
+   329  00FF4C  0100               	movlb	0	; () banked
+   330  00FF4E  51FA               	movf	((Wait@DATA))&0ffh,w
+   331  00FF50  0100               	movlb	0	; () banked
+   332  00FF52  0100               	movlb	0	; () banked
+   333  00FF54  5DFC               	subwf	((Wait@i))&0ffh,w
+   334  00FF56  0100               	movlb	0	; () banked
+   335  00FF58  0100               	movlb	0	; () banked
+   336  00FF5A  51FB               	movf	((Wait@DATA+1))&0ffh,w
+   337  00FF5C  0100               	movlb	0	; () banked
+   338  00FF5E  0100               	movlb	0	; () banked
+   339  00FF60  59FD               	subwfb	((Wait@i+1))&0ffh,w
+   340  00FF62  A0D8               	btfss	status,0
+   341  00FF64  D001               	goto	u61
+   342  00FF66  D001               	goto	u60
+   343  00FF68                     u61:
+   344  00FF68  D7CA               	goto	l110
+   345  00FF6A                     u60:
+   346                           	
+   347  00FF6A                     l111:		; BSR set to: ?
+   348                           
+   349                           	line	14
+   350                           ;Count.c: 13: }
+   351                           ;Count.c: 14: }
+   352  00FF6A                     l109:
+   353                           			; BSR set to: ?
+   354                           
+   355  00FF6A  0012               	return
+   356                           	opt stack 0
+   357                           GLOBAL __end_of_Wait
+   358  00FF6C                     	__end_of_Wait:
+   359                           	FNSIZE	_Wait,4,2
+   360                           ; =============== function _Wait ends ==========
+                                 ==
+   361                           
+   362                           	signat	_Wait,4216
+   363                           	FNCALL	_main,_Wait
+   364                           	FNROOT	_main
+   365                                   psect   const,class=CODE,space=0,reloc=2
+   366                           	global	_ADCON1
+   367  000000                     _ADCON1	equ	0xFC1
+   368                           	global	_PORTA
+   369  000000                     _PORTA	equ	0xF80
+   370                           	global	_PORTB
+   371  000000                     _PORTB	equ	0xF81
+   372                           	global	_PORTC
+   373  000000                     _PORTC	equ	0xF82
+   374                           	global	_PORTD
+   375  000000                     _PORTD	equ	0xF83
+   376                           	global	_TRISA
+   377  000000                     _TRISA	equ	0xF92
+   378                           	global	_TRISB
+   379  000000                     _TRISB	equ	0xF93
+   380                           	global	_TRISC
+   381  000000                     _TRISC	equ	0xF94
+   382                           	global	_TRISD
+   383  000000                     _TRISD	equ	0xF95
+   384                           	global	_TRISE
+   385  000000                     _TRISE	equ	0xF96
+   386                           	psect	intsave_regs,class=BIGRAM,space=1
+   387                           	PSECT	param0,class=BANK0,space=1
+   388                           	GLOBAL	__Lparam0
+   389                           	FNCONF	param0,??,?
+   390                           GLOBAL	__Lparam, __Hparam
+   391                           GLOBAL	__Lparam0, __Hparam0
+   392  000000                     __Lparam	EQU	__Lparam0
+   393  000000                     __Hparam	EQU	__Hparam0
+
+
+HI-TECH Software PICC-18 Macro Assembler V9.63PL3 build 4692 
+Symbol Table                                           Fri Nov 29 19:09:16 2024
+
+           u40 FF22             u41 FF20             u50 FF42  
+           u51 FF40             u60 FF6A             u61 FF68  
+          l110 FEFE            l111 FF6A            l113 FF4A  
+          l114 FF24            l115 FF42            l109 FF6A  
+          l118 FFFA            l119 FFA6           _Wait FEEE  
+         _main FF6C           start 0800          ?_Wait 00FA  
+        ?_main 00F5          _PORTA 000F80          _PORTB 000F81  
+        _PORTC 000F82          _PORTD 000F83          _TRISA 000F92  
+        _TRISB 000F93          _TRISC 000F94          _TRISD 000F95  
+        _TRISE 000F96          Wait@i 00FC          Wait@j 00FE  
+        main@i 00F5          status 000FD8   __end_of_Wait FF6C  
+ __end_of_main 0000         ??_Wait 00FC         ??_main 00F5  
+__activetblptr 000000         _ADCON1 000FC1         __Ldata 000000  
+ __mediumconst 1000     __accesstop 0080        __Hparam 0100  
+      __Lparam 00F5        __ramtop 1000  __Lmediumconst 1000  
+  __smallconst 1000       Wait@DATA 00FA       __Hparam0 0100  
+     __Lparam0 00F5   __Lsmallconst 1000  

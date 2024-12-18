@@ -1,0 +1,21 @@
+_unlock: CODE, 4210 0 792
+_Wait_ms: CODE, 9434 0 126
+_LCD_Inst: CODE, 9662 0 78
+_IntServe: CODE, 8910 0 246
+_ReadKey: CODE, 9740 0 76
+_main: CODE, 5002 0 718
+_move: CODE, 8008 0 352
+___awdiv: CODE, 8360 0 304
+_playNote: CODE, 8664 0 246
+_LCD_Out: CODE, 7616 0 392
+_GetKey: CODE, 5720 0 660
+___aldiv: CODE, 6380 0 452
+___wmul: CODE, 9560 0 102
+_LCD_Move: CODE, 9302 0 132
+_LCD_Strobe: CODE, 9930 0 20
+_LCD_Pause: CODE, 9876 0 54
+___almod: CODE, 6832 0 392
+_LCD_Write: CODE, 9816 0 60
+_LCD_Init: CODE, 9156 0 146
+_screenClear: CODE, 7224 0 392
+Total: 5740

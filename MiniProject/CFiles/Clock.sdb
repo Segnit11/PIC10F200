@@ -1,0 +1,45 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4620 ]
+"9 C:\Users\stulujr.local\Documents\MiniProject\CFiles\Count.c
+[v _Wait `(v  1 e 0 0 ]
+"21
+[v _main `(v  1 e 0 0 ]
+"90 C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\include\pic18f4620.h
+[v _ADCON1 `Nuc  1 e 1 @4033 ]
+"133
+[v _TRISE `VNuc  1 e 1 @3990 ]
+"134
+[v _TRISD `VNuc  1 e 1 @3989 ]
+"136
+[v _TRISC `VNuc  1 e 1 @3988 ]
+"137
+[v _TRISB `VNuc  1 e 1 @3987 ]
+"138
+[v _TRISA `VNuc  1 e 1 @3986 ]
+"148
+[v _PORTD `VNuc  1 e 1 @3971 ]
+"150
+[v _PORTC `VNuc  1 e 1 @3970 ]
+"151
+[v _PORTB `VNuc  1 e 1 @3969 ]
+"152
+[v _PORTA `VNuc  1 e 1 @3968 ]
+"21 C:\Users\stulujr.local\Documents\MiniProject\CFiles\Count.c
+[v _main `(v  1 e 0 0 ]
+{
+"22
+[v _i `ul  1 a 4 0 ]
+"40
+} 4
+"9
+[v _Wait `(v  1 e 0 0 ]
+{
+"10
+[v _i `ui  1 a 2 0 ]
+[v _j `ui  1 a 2 2 ]
+"9
+[v _DATA `ui  1 p 2 0 ]
+"14
+} 4
