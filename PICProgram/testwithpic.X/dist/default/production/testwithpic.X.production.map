@@ -1,0 +1,91 @@
+Microchip MPLAB XC8 PIC(R) Assembler V2.50
+
+Linker command line:
+
+-W-3 \
+  --edf=C:\Program Files\Microchip\xc8\v2.50\pic\dat\20240725155939_en.msgs \
+  -cs -h+dist/default/production\testwithpic.X.production.sym \
+  --cmf=dist/default/production\testwithpic.X.production.cmf -z -Q10F200 \
+  -oC:\Users\STULUJ~1.LOC\AppData\Local\Temp\xcAser8.\driver_tmp_3.o \
+  --fixupoverflow=error -ver=XC8 PIC(R) Assembler --fixupoverflow=lstwarn \
+  -Mdist/default/production/testwithpic.X.production.map -E1 --acfsm=1493 \
+  -ACODE=00h-0FFh -ASTRCODE=00h-0FFh -ASTRING=00h-0FFh \
+  -AENTRY=00h-0FFh-0FFh -ABANK0=010h-01Dh -ARAM=010h-01Dh -AABS1=010h-01Fh \
+  -ACOMMON=01Ch-01Fh -ASFR0=00h-0Fh -ACONFIG=0FFFh-0FFFh -DCONFIG=2 \
+  -AIDLOC=0100h-0103h -DIDLOC=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
+  -DENTRY=2 build/default/production/main.o 
+
+Object code version is 3.11
+
+Machine type is 10F200
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+build/default/production/main.o
+                config                              FFF      FFF        1        0       4
+                resetVect                            E5       E5        1      1CA       0
+                code                                 E6       E6       1A      1CC       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   CODE           
+                resetVect                            E5       E5        1         0
+                code                                 E6       E6       1A         0
+
+        CLASS   STRCODE        
+
+        CLASS   STRING         
+
+        CLASS   ENTRY          
+
+        CLASS   BANK0          
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+
+        CLASS   COMMON         
+
+        CLASS   SFR0           
+
+        CLASS   CONFIG         
+                config                              FFF      FFF        1         4
+
+        CLASS   IDLOC          
+
+        CLASS   CONST          
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                resetVect                      0000E5  000001  0000E6       1CA       0  CODE        2
+                code                           0000E6  00001A  000100       1CC       0  CODE        2
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            0010-001D              E           1
+        CODE             0000-00E4             E5           2
+        COMMON           001C-001F              4           1
+        ENTRY            0000-00E4             E5           2
+        IDLOC            0100-0103              4           2
+        RAM              0010-001D              E           1
+        SFR0             0000-000F             10           1
+        STRCODE          0000-00E4             E5           2
+        STRING           0000-00E4             E5           2
+
+                                  Symbol Table
+
+__H__absolute__ __absolute__ 0000  __Hcode         code         0000
+__Hconfig       config       1000  __Hdata         data         0000
+__HresetVect    resetVect    0000  __Hspace_0      (abs)        0100
+__Hspace_1      (abs)        0000  __Hspace_4      (abs)        1FFF
+__Hudata        udata        0000  __Hudata_bank0  udata_bank0  0000
+__L__absolute__ __absolute__ 0000  __Lcode         code         0000
+__Lconfig       config       0000  __Ldata         data         0000
+__LresetVect    resetVect    0000  __Lspace_0      (abs)        0000
+__Lspace_1      (abs)        0000  __Lspace_4      (abs)        0000
+__Ludata        udata        0000  __Ludata_bank0  udata_bank0  0000
+__S0            (abs)        0100  __S1            (abs)        0000

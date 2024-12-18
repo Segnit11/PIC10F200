@@ -1,0 +1,56 @@
+__S0 100 0 ABS 0
+__S1 0 0 ABS 0
+__Hconfig 1000 0 CONFIG 4
+__Lconfig 0 0 CONFIG 4
+__HresetVect 0 0 ABS 0
+__LresetVect 0 0 ABS 0
+__Hcode 0 0 ABS 0
+__Lcode 0 0 ABS 0
+__Hdata 0 0 ABS 0
+__Ldata 0 0 ABS 0
+__Hudata_bank0 0 0 ABS 0
+__Ludata_bank0 0 0 ABS 0
+__H__absolute__ 0 0 ABS 0
+__L__absolute__ 0 0 ABS 0
+__Hudata 0 0 ABS 0
+__Ludata 0 0 ABS 0
+__Hspace_0 100 0 ABS 0
+__Lspace_0 0 0 ABS 0
+__Hspace_1 0 0 ABS 0
+__Lspace_1 0 0 ABS 0
+__Hspace_4 1FFF 0 ABS 0
+__Lspace_4 0 0 ABS 0
+%segments
+code 1CC 1FF CODE 1CC 0
+resetVect 1CA 1CB CODE 1CA 0
+%locals
+build/default/debug/main.o
+main.s
+30 E6 0 CODE 0
+39 E7 0 CODE 0
+40 E8 0 CODE 0
+41 E9 0 CODE 0
+42 EA 0 CODE 0
+43 EB 0 CODE 0
+47 EC 0 CODE 0
+48 ED 0 CODE 0
+51 EE 0 CODE 0
+52 EF 0 CODE 0
+55 F0 0 CODE 0
+56 F1 0 CODE 0
+57 F2 0 CODE 0
+58 F3 0 CODE 0
+59 F4 0 CODE 0
+60 F5 0 CODE 0
+64 F6 0 CODE 0
+65 F7 0 CODE 0
+67 F8 0 CODE 0
+68 F9 0 CODE 0
+69 FA 0 CODE 0
+70 FB 0 CODE 0
+74 FC 0 CODE 0
+75 FD 0 CODE 0
+76 FE 0 CODE 0
+77 FF 0 CODE 0
+23 E5 0 CODE 0
+24 E5 0 CODE 0
