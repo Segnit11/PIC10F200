@@ -6,11 +6,7 @@
 //  LCD_DATA:   send data to the LCD
 //  LCD_INIT:   initialize the LCD to 16x4 mode
 //
-//--- Revision History -----------------
-//     5/20/00   JSG
-//     9/27/00   Modify LCD_HELLO for Jump messages
-//    11/05/00   Clean up LCD routine to use less RAM
-//    10/14/14   Modified for new PIC boards
+
 
 void Wait_ms(unsigned int X)
 {
